@@ -1,0 +1,29 @@
+[
+  {
+    "id": "e5ed73b1",
+    "type": "function",
+    "name": "api",
+    "outputs": 1,
+    "memorySize": 128,
+    "timeout": 30,
+    "location": "inline",
+    "x": 490,
+    "y": 220,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "796f3aba",
+    "type": "restApi",
+    "path": "/*",
+    "domain": "api-demo.stackery.io",
+    "x": 240,
+    "y": 220,
+    "wires": [
+      [
+        "e5ed73b1"
+      ]
+    ]
+  }
+]
