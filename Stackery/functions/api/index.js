@@ -17,9 +17,6 @@ module.exports = function handler(message, output) {
       }
 
   return server.initialize()
-    /* We don't actually want the server to listen for connections in serverless
-     * mode, so stop it */
-    .then(() => server.stop())
     .then(() => server.inject(request))
     .then((response) => {
       /* Transform hapi response to Stackery Rest Api response message */
