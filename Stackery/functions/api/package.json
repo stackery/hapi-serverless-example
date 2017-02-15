@@ -1,0 +1,19 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Example hapi.js API service integration for Stackery",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stackery/hapi-serverless-example.git"
+  },
+  "author": "Chase Douglas <chase@stackery.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stackery/hapi-serverless-example/issues"
+  },
+  "homepage": "https://github.com/stackery/hapi-serverless-example#readme",
+  "dependencies": {
+    "ProductsAPI": "github:stackery/hapi-example"
+  }
+}

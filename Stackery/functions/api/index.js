@@ -1,23 +1,32 @@
 "use strict"
 
-module.exports = function handler(request, output) {
-  // Log the request to the console.
-  console.log('Request:')
-  console.dir(request)
-  
-  let responseBody = `
-    <h4>Woot!</h4>
-    <p>Try this: <a href="hi">hi</a>. It will echo "hi" back to you!
-  `
+const server = require('ProductsAPI')
 
-  // Build an HTTP response.
-  let response = {
-    statusCode: 200,
-    headers: {
-      "Content-Type": "text/html"
-    },
-    body: responseBody
-  }
-  
-  return response
+module.exports = function handler(message, output) {
+  /* If you want to output messages to further nodes, you can put the output
+   * function on the server object: */
+  server.app.output = output
+
+  /* Transform Stackery message to request message for hapi */
+  let request = {
+        method: message.method,
+        url: message.pathname,
+        headers: message.headers,
+        payload: message.body,
+        remoteAddress: message.ip
+      }
+
+  return server.initialize()
+    /* We don't actually want the server to listen for connections in serverless
+     * mode, so stop it */
+    .then(() => server.stop())
+    .then(() => server.inject(request))
+    .then((response) => {
+      /* Transform hapi response to Stackery Rest Api response message */
+      return {
+        statusCode: response.statusCode,
+        headers: response.headers,
+        body: response.rawPayload
+      }
+    })
 }
