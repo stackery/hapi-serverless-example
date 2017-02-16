@@ -54,7 +54,7 @@ Using serverless technologies for APIs provides multiple benefits:
 1. Log into [Stackery](https://app.stackery.io)
 1. Create a new Stackery stack
   1. Name the stack (e.g. _hapi-demo_)
-  1. Choose to *Import Stack From GitHub*
+  1. Choose to **Import Stack From GitHub**
   1. Connect your account to GitHub if needed
   1. Select your fork of this repo from the list of repos
   1. Create stack!
