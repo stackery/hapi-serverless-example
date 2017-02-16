@@ -50,7 +50,7 @@ Using serverless technologies for APIs provides multiple benefits:
 * [AWS](https://aws.amazon.com) account with an unused [API Gateway Custom Domain](http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html) (e.g. _hapi-demo.example.com_)
 
 ### Steps To Deploy
-1. [Fork](https://github.com/stackery/hapi-serverless-example/tree/master#fork-destination-box) this repo to your own GitHub account (you will need write access to it)
+1. [Fork](#fork-destination-box) this repo to your own GitHub account (you will need write access to it)
 1. Log into [Stackery](https://app.stackery.io)
 1. Create a new Stackery stack
   1. Name the stack (e.g. _hapi-demo_)
