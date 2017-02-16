@@ -2,6 +2,16 @@
 
 This example shows how an existing [hapi](https://hapijs.com/) API can be used with Stackery to run on a serverless infrastructure.
 
+### Why?
+Using serverless technologies for APIs provides multiple benefits:
+* Requests are handled in parallel with unbounded horizontal scalability.
+* Increased infrastructure efficiency because serverless functions run only when API requests are made. Infrequently accessed APIs no longer require base-line server instance costs.
+* Ops overhead is reduced as much of the engineering challenges around scalability are handled automatically by the infrastructure provider.
+
+However, most serverless-based APIs are built by decomposing functionality into individual functions servicing only one endpoint. This can be challenging to maintain due to the complexities of managing helper functionality used across multiple endpoints.
+
+Instead, we can build a single function servicing all requests using a mature, popular API framework like [hapi](https://hapijs.com/). This way developers can use tools and techniques they are already familiar with to power their API services.
+
 ### How?
 This repo contains a Stackery stack that can be forked and imported into your own Stackery account. The stack contains two nodes: a [Rest Api node](https://docs.stackery.io/nodes/RestApi/index.html) and a [Function node](https://docs.stackery.io/nodes/Function/index.html).
 
@@ -38,12 +48,6 @@ module.exports = function handler(message, output) {
     })
 }
 ```
-
-### Why?
-Using serverless technologies for APIs provides multiple benefits:
-* Requests are handled in parallel with unbounded horizontal scalability.
-* Increased infrastructure efficiency because serverless functions run only when API requests are made. Infrequently accessed APIs no longer require base-line server instance costs.
-* Ops overhead is reduced as much of the engineering challenges around scalability are handled automatically by the infrastructure provider.
 
 ### Prerequisites
 * [Stackery](https://stackery.io) account
