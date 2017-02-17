@@ -57,7 +57,7 @@ module.exports = function handler(message, output) {
 1. Fork this repo to your own GitHub account (you will need write access to it)
 1. Log into [Stackery](https://app.stackery.io)
 1. Create a new Stackery stack
-  1. Name the stack (e.g. _hapi-demo_)
+  1. Name the stack (e.g. _hapi-demo_) **Do Not Create It Yet!**
   1. Choose to **Import Stack From GitHub**
   1. Connect your account to GitHub if needed
   1. Select your fork of this repo from the list of repos
@@ -66,7 +66,7 @@ module.exports = function handler(message, output) {
   * If you don't see your domain in the drop down, check that the domain exists in API Gateway for the region you provisioned Stackery into.
 1. Deploy your stack
   1. Click the **Deploy** button in the top right corner of the Stackery dashboard, then select the _Default_ deployment
-  1. Switch to the _Default_ deployment tab
-  1. Once the deployment change set has been created, click on the change set link to be taken to [AWS CloudFormation](https://aws.amazon.com/cloudformation/) to execute the change set
-  1. Back in the Stackery dashboard, wait for the deployment to be deployed
+  1. Switch to the _Default_ deployment tab, watch the change set be created
+  1. Once the deployment change set has been created, click on the new change set link to be taken to [AWS CloudFormation](https://aws.amazon.com/cloudformation/), then click the **Execute** button
+  1. Back in the Stackery dashboard, wait for the deployment status to switch from _Change Set Created_ to _Deployed_ (there is no progress bar notification for this step yet)
   1. Navigate to your domain and test it out! (e.g. _https://hapi-demo.example.com/products_)
