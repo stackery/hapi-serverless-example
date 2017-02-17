@@ -49,23 +49,5 @@ module.exports = function handler(message, output) {
 }
 ```
 
-### Prerequisites
-* [Stackery](https://stackery.io) account
-* [AWS](https://aws.amazon.com) account with an unused [API Gateway Custom Domain](http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html) (e.g. _hapi-demo.example.com_)
-
-### Steps To Deploy
-1. Fork this repo to your own GitHub account (you will need write access to it)
-1. Log into [Stackery](https://app.stackery.io)
-1. Create a new Stackery stack
-  1. Name the stack (e.g. _hapi-demo_) **Don't Hit The Create Button Yet!**
-  1. Choose to **Import Stack From GitHub**
-  1. Select your fork of this repo from the list of repos
-  1. Create stack!
-1. Double click on the Rest Api node on the left and select your custom domain from the drop down
-  * If you don't see your domain in the drop down, check that the domain exists in [API Gateway](https://us-west-2.console.aws.amazon.com/apigateway/home#/custom-domain-names) for the region you provisioned Stackery into.
-1. Deploy your stack
-  1. Click the **Deploy** button in the top right corner of the Stackery dashboard, then select the _Default_ deployment
-  1. Switch to the _default_ deployment tab, watch the change set be created
-  1. Once the deployment change set has been created, click on the new change set link to be taken to [AWS CloudFormation](https://aws.amazon.com/cloudformation/), then click the **Execute** button
-  1. Back in the Stackery dashboard, wait for the deployment status to switch from _Change Set Created_ to _Deployed_ (there is no progress bar notification for this step yet)
-  1. Navigate to your domain and test it out! (e.g. _https://hapi-demo.example.com/products_)
+### Let's Get Started!
+The full instructions are in this [guide](https://docs.stackery.io/guides/hapi#prerequisites)
