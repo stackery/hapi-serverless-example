@@ -57,7 +57,7 @@ module.exports = function handler(message, output) {
 1. Fork this repo to your own GitHub account (you will need write access to it)
 1. Log into [Stackery](https://app.stackery.io)
 1. Create a new Stackery stack
-  1. Name the stack (e.g. _hapi-demo_) **Do Not Create It Yet!**
+  1. Name the stack (e.g. _hapi-demo_) **Don't Hit The Create Button Yet!**
   1. Choose to **Import Stack From GitHub**
   1. Connect your account to GitHub if needed
   1. Select your fork of this repo from the list of repos
