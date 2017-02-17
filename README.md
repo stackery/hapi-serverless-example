@@ -59,7 +59,6 @@ module.exports = function handler(message, output) {
 1. Create a new Stackery stack
   1. Name the stack (e.g. _hapi-demo_) **Don't Hit The Create Button Yet!**
   1. Choose to **Import Stack From GitHub**
-  1. Connect your account to GitHub if needed
   1. Select your fork of this repo from the list of repos
   1. Create stack!
 1. Double click on the Rest Api node on the left and select your custom domain from the drop down
