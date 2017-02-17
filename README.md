@@ -65,7 +65,7 @@ module.exports = function handler(message, output) {
   * If you don't see your domain in the drop down, check that the domain exists in [API Gateway](https://us-west-2.console.aws.amazon.com/apigateway/home#/custom-domain-names) for the region you provisioned Stackery into.
 1. Deploy your stack
   1. Click the **Deploy** button in the top right corner of the Stackery dashboard, then select the _Default_ deployment
-  1. Switch to the _Default_ deployment tab, watch the change set be created
+  1. Switch to the _default_ deployment tab, watch the change set be created
   1. Once the deployment change set has been created, click on the new change set link to be taken to [AWS CloudFormation](https://aws.amazon.com/cloudformation/), then click the **Execute** button
   1. Back in the Stackery dashboard, wait for the deployment status to switch from _Change Set Created_ to _Deployed_ (there is no progress bar notification for this step yet)
   1. Navigate to your domain and test it out! (e.g. _https://hapi-demo.example.com/products_)
