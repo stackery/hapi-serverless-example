@@ -62,7 +62,7 @@ module.exports = function handler(message, output) {
   1. Select your fork of this repo from the list of repos
   1. Create stack!
 1. Double click on the Rest Api node on the left and select your custom domain from the drop down
-  * If you don't see your domain in the drop down, check that the domain exists in API Gateway for the region you provisioned Stackery into.
+  * If you don't see your domain in the drop down, check that the domain exists in [API Gateway](https://us-west-2.console.aws.amazon.com/apigateway/home#/custom-domain-names) for the region you provisioned Stackery into.
 1. Deploy your stack
   1. Click the **Deploy** button in the top right corner of the Stackery dashboard, then select the _Default_ deployment
   1. Switch to the _Default_ deployment tab, watch the change set be created
