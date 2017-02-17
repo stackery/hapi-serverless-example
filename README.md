@@ -19,7 +19,7 @@ The Function node is a small wrapper around [hapi-example](https://github.com/st
 
 The only other piece of functionality needed is a hookup between an incoming Stackery [HTTP request message](https://docs.stackery.io/nodes/RestApi/index.html#output) and the hapi server, and then a hookup between the hapi response and the Stackery [HTTP response](https://docs.stackery.io/nodes/RestApi/index.html#expected-response). This is performed by the [api function handler](Stackery/functions/api/index.js):
 
-```node
+```javascript
 const server = require('ProductsAPI')
 
 module.exports = function handler(message, output) {
