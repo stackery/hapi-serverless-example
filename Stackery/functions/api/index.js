@@ -2,11 +2,7 @@
 
 const server = require('ProductsAPI')
 
-module.exports = function handler(message, output) {
-  /* If you want to output messages to further nodes, you can put the output
-   * function on the server object: */
-  server.app.output = output
-
+module.exports = function handler(message) {
   /* Transform Stackery message to request message for hapi */
   let request = {
         method: message.method,
