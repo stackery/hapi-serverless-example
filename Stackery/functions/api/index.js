@@ -1,25 +1,27 @@
-"use strict"
+'use strict';
 
-const server = require('ProductsAPI')
+const server = require('ProductsAPI');
 
-module.exports = function handler(message) {
-  /* Transform Stackery message to request message for hapi */
+module.exports = function handler (event, context, callback) {
+  console.log(event);
+  /* Transform Api Gateway message to request message for hapi */
   let request = {
-        method: message.method,
-        url: message.pathname,
-        headers: message.headers,
-        payload: message.body,
-        remoteAddress: message.ip
-      }
+    method: event.method,
+    url: event.path,
+    headers: event.headers,
+    payload: event.body,
+    remoteAddress: event.ip
+  };
 
   return server.initialize()
     .then(() => server.inject(request))
     .then((response) => {
-      /* Transform hapi response to Stackery Rest Api response message */
-      return {
+      console.log(response);
+      /* Transform hapi response to Api Gateway response message */
+      callback(null, {
         statusCode: response.statusCode,
         headers: response.headers,
-        body: response.rawPayload
-      }
-    })
-}
+        body: response.payload
+      });
+    }).catch(err => console.log(err));
+};
