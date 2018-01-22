@@ -23,5 +23,5 @@ module.exports = function handler (event, context, callback) {
         headers: response.headers,
         body: response.payload
       });
-    }).catch(err => console.log(err));
+    });
 };
