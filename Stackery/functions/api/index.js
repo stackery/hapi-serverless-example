@@ -6,7 +6,7 @@ module.exports = function handler (event, context, callback) {
   console.log(event);
   /* Transform Api Gateway message to request message for hapi */
   let request = {
-    method: event.method,
+    method: event.httpMethod,
     url: event.path,
     headers: event.headers,
     payload: event.body,
